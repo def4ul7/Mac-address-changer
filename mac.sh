@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo apt-get install macchanger -y
 macchanger -l > maclist.txt
 ouimac=$(shuf -n 1 maclist.txt | awk '{print$3}')
 uaamac=$(printf '%02x:''%02x:''%02x' $[RANDOM%256] $[RANDOM%256] $[RANDOM%256])
